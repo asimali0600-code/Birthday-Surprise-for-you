@@ -1,8 +1,3 @@
-/* ======================================
-   Luxury Birthday Website
-   script.js
-====================================== */
-
 const loader = document.getElementById("loader");
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
