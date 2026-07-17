@@ -1,0 +1,380 @@
+/* ===========================
+   Luxury Birthday Website
+   style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#080808;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* Gold Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d4af37;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#loader h1{
+    color:#d4af37;
+    font-family:'Cinzel',serif;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{transform:scale(1.08);}
+}
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(12px);
+    z-index:100;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:28px;
+    font-family:'Cinzel',serif;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    radial-gradient(circle at top,#5c3b00 0%,#080808 60%);
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:68px;
+    font-family:'Cinzel',serif;
+}
+
+.hero span{
+    color:#d4af37;
+}
+
+.hero p{
+    margin:25px 0;
+    font-size:20px;
+    color:#dddddd;
+}
+
+.hero button{
+    padding:16px 40px;
+    border:none;
+    border-radius:50px;
+    background:#d4af37;
+    color:#111;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.hero button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #d4af37;
+}
+
+/* Sections */
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    color:#d4af37;
+    font-size:42px;
+    margin-bottom:50px;
+    font-family:'Cinzel',serif;
+}
+
+/* Gallery */
+
+.gallery img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+    background:#111;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    display:block;
+}
+
+/* Letter */
+
+.letter-box{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(212,175,55,.35);
+    backdrop-filter:blur(14px);
+    padding:45px;
+    border-radius:25px;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.letter-box h2{
+    margin-bottom:25px;
+}
+
+/* Cake */
+
+#cake{
+    text-align:center;
+}
+
+.cake{
+    width:260px;
+    height:170px;
+    margin:30px auto;
+    position:relative;
+    background:linear-gradient(#ffe7b5,#d9a63f);
+    border-radius:18px;
+    box-shadow:
+    0 0 30px rgba(212,175,55,.45);
+}
+
+.cake::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:28px;
+    background:#fff5dc;
+    border-radius:50%;
+    top:-14px;
+    left:0;
+}
+
+.candle{
+    position:absolute;
+    width:16px;
+    height:60px;
+    background:#ffffff;
+    left:50%;
+    transform:translateX(-50%);
+    top:-60px;
+}
+
+.flame{
+    width:18px;
+    height:18px;
+    background:gold;
+    border-radius:50%;
+    margin:auto;
+    margin-top:-12px;
+    box-shadow:0 0 30px orange;
+    animation:flicker .5s infinite alternate;
+}
+
+@keyframes flicker{
+
+from{
+transform:scale(.9);
+}
+
+to{
+transform:scale(1.1);
+}
+
+}
+
+#blowCandles{
+margin-top:30px;
+padding:14px 35px;
+border:none;
+border-radius:40px;
+background:#d4af37;
+font-size:18px;
+cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:35px;
+background:#000;
+color:#d4af37;
+}
+
+/* Floating Music Button */
+
+#musicBtn{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:65px;
+height:65px;
+
+border:none;
+border-radius:50%;
+
+background:#d4af37;
+
+font-size:24px;
+
+cursor:pointer;
+
+z-index:999;
+
+box-shadow:0 0 20px #d4af37;
+
+}
+
+/* Decorative Layers */
+
+#petals,
+#sparkles,
+#fireworks{
+
+position:fixed;
+inset:0;
+pointer-events:none;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+gap:12px;
+
+}
+
+nav ul{
+
+gap:16px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+section{
+
+padding:80px 20px;
+
+}
+
+.letter-box{
+
+padding:25px;
+font-size:16px;
+
+}
+
+.cake{
+
+width:200px;
+height:130px;
+
+}
+
+.cake::before{
+
+width:200px;
+
+}
+
+}
